@@ -37,7 +37,7 @@ const columns: IColumn[] = [
     field: "id",
     headerName: "ID",
     secondary: true,
-    width: () => 50,
+    width: () => 100,
   },
   {
     type: ColumnType.Text,
@@ -97,7 +97,7 @@ export const TodoListPage = () => {
   const { setLoader } = useLoader();
 
   const handler = useArrayPaginator(
-    async () => await fetchApi("/api/v1/todos"),
+    async () => await fetchApi("/users"),
     {
       onLoadStart: () => setLoader(true),
       onLoadEnd: () => setLoader(false),
